@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Linux;
+use App\Windows;
 use Illuminate\Http\Request;
 
 class OneController extends Controller
@@ -45,7 +47,14 @@ class OneController extends Controller
      */
     public function show($id)
     {
-        //
+        $qLinux = Linux::find($id);
+        $qWindows = Windows::find($id);
+        $data = [
+            'id' => (integer)$id,
+            'post' => $qLinux->name,
+            'comment' => $qWindows->name
+        ];
+        return $data;
     }
 
     /**

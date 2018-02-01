@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Linux extends Model
+class Windows extends Model
 {
     /**
      * Option Connection Database
      */
-    protected $connection = 'linux';
+    protected $connection = 'windows';
     /**
      * Table
      */
-    protected $table = 'postlinux';
+    protected $table = 'post';
     /**
      * Primary Key
      */
